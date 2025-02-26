@@ -1,39 +1,23 @@
-/**
-*
-*
-*  <div id="parent">
-        <div id="child1">
-            <h1>I am an h1 tag</h1>
-            <h2>I am an h2 tag</h2>
-        </div>
-        <div id="child2">
-            <h1>I am an h1 tag</h1>
-            <h2>I am an h2 tag</h2>
-        </div>
-    </div>
-*
-*   ReactElement is an object
-*   ReactRender will take that object and will convert it into an HTML which can be understand by browser
-*/
-
-
-// const heading = React.createElement("h1", {id: "heading"}, "Hello world from React!");
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "child" },
-    [React.createElement("div", { id: "child1" },
-        [React.createElement("h1", {}, "This is Namaste React"),
-        React.createElement("h2", {}, "I am an h2 tag")]
-    ), React.createElement("div", { id: "child2" },
-        [React.createElement("h1", {}, "I am an h1 tag"),
-        React.createElement("h2", {}, "I am an h2 tag")]
-    )]
+// React Element
+const ele = <span>React Element</span>;
+
+const Title = () => <h1 className="head">Namsthe React using JSX {ele}</h1>;
+
+const HeadingComponent1 = () => {
+  return <h1>Namasthe React using Functional component</h1>;
+};
+
+const HeadingComponent2 = () => (
+  <div id="container">
+    <h2>{ele}</h2>
+    {Title()}
+    <Title />
+    <h1 className="headsing">Namasthe React using Functional component</h1>
+  </div>
 );
 
-console.log(parent);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(parent);
+root.render(<HeadingComponent2 />);
