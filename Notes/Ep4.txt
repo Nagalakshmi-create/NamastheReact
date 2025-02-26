@@ -1,0 +1,10 @@
+Config Driven UI:
+	• It is an approach where the user interface (UI) is dynamically generated based on configuration data rather than hardcoded components. This makes the UI more flexible, scalable, and easily customizable.
+	• Instead of defining UI components explicitly in the code, you use JSON or another data format to describe the structure, behavior, and styling.
+	• The application reads the configuration and dynamically renders the UI based on the provided data.
+	• This is useful for creating dynamic forms, dashboards, or multi-tenant applications where UI elements change based on user roles, permissions, or API responses.
+
+Using Key in map function:
+	• In React, when using the .map() function to render a list of elements, you need to provide a key prop to help React efficiently update the UI when the list changes. 
+	• The key helps React identify which items have changed, been added, or removed.
+	• We need to use the unique id for each children instead of using the index as the key

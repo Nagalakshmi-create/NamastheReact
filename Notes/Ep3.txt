@@ -1,0 +1,30 @@
+	• To run the project instead of running npx parcel index.html we can define scripts inside the package.json file like this
+	
+	"scripts": {
+	    "start": "parcel index.html",
+	    "build": "parcel build index.html",
+	  },
+	• To run the project in the development environment, use: npm run start
+	• For production, use:  npm run build 
+	• In development, npm start (without run) also works, but for production, npm build (without run) won't work.
+	
+JSX:
+	• JSX is a JavaScript syntax that makes it easier to create React elements.
+	• JSX is not HTML; its syntax resembles HTML but is different.
+	• The JavaScript engine cannot understand JSX directly, as it only understands ES6 and later versions.
+	• JSX is transpiled before reaching the JS engine. This is done by Parcel using the Babel package.
+	• Babel is a JavaScript compiler that converts JSX into a format that browsers can understand.
+	• JSX is converted into React.createElement(), which then creates a ReactElement object that is eventually rendered as HTML in the browser.
+	• JSX attributes must follow camelCase naming conventions.
+	• In HTML, we use class for styling, but in JSX, we use className instead.
+	• When writing JSX across multiple lines, wrap the code inside parentheses (()) to ensure Babel correctly transpiles it.
+	• JSX is making the readable
+
+React Components:
+	1. Class based component
+	2. Functional component
+
+React Functional Component:
+	• A functional component is a JavaScript function that returns JSX (a syntax extension for writing HTML inside JavaScript).
+	• Rendering the component inside a component is called component composition
+	• We can write any JavaScript code inside the curly braces

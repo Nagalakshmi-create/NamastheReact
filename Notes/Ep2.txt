@@ -1,0 +1,62 @@
+
+# npm is a package manager it is a repository where it will have all packages
+# npm will manage all the packages that we will install
+
+# bundler will bundles our project so that we can able to move the whole project into production. There are so many bundlers ex: webpack, parcel,..
+
+# There are 2 kinds of dependencies dev dependencies and dependencies.
+# Dev dependencies are required for the development, dependencies are used for the production also
+# while installing any package if we are giving -D that means we are installing only dev dependencies
+# npm install -D parcel
+
+# caret (^)   tilde (~)
+# If we are giving caret before our version it will do the minor upgradations like if now we are in 4.7.2 it will upgrade the minor versions only like may 4.7.5 
+
+# If we are using tilde it will upgrade the major version like from 4.7.2 to 5.2.1
+ 
+# package.json is a configuration for npm it keeps the track of what version of package is installed on our system
+# package-lock.json keeps the track of every exact version of package and dependency which we have installed
+
+# node_modules contains the code of the packages what we have installed (collection of all dependencies)
+# If we have package.json and package-lock.json we can recreate all our node_modules no need to push the node_modules into the git
+
+# To create server for our app we have to use
+	- To execute a package we will use npx
+	- npx parcel index.html
+	- This will create a localhost for our app
+
+# To make this app ready for prod
+	- npx parcel build index.html
+	- It will create dist folder and bundle all our files~
+	- It will compress all our files
+
+# browserslist
+	- By using this browserslist we can tell our app on which browsers it should work and along with that for which versions it should work also we can say
+	- We can specify by our in which country it should work
+	- We will add that inside the package.json
+	
+"browsersList": [
+    "Last 2 Chrome version",
+    "Last 2 Firefox version"
+  ]
+
+
+# parcel
+	- Dev Build
+	- Local Server
+	- HMR = Hot module Replacement (auto refresh after immediately changing the file) 
+	- File Watching Algorithm => Written in C++
+	- Caching - Faster builds
+	- Image Optimization
+	- Minification of our files
+	- Will bundle all our files
+	- Compress the files
+	- Consistent Hashing
+	- Code splitting
+	- Differential Bundling => To support older browsers
+	- Diagnostic
+	- Error handling
+	- Reliable catching
+	- We can host that on that HTTPs
+	- Tree Shaking => Remove unwanted code from the files
+	- Different dev and prod bundles

@@ -1,0 +1,26 @@
+	• html:5 to get the skeleton of html
+	• createElement used to create the html elements
+	• innerHTML used to give the content for the created elements
+
+CDN Links
+	• CDN is a place where the react library is hosted
+	• We are fetching that react and putting that in our code through CDN
+	• We need to use the CDN 2 links inside the body in the index.html
+	• 1st links is the core of the react framework algorithm
+	• 2nd link is the react library which is useful for DOM operations (kind of bridge to connect the react and the browser)
+	
+crossorigin:
+	• The crossorigin attribute in a <script> tag is used to control how the browser handles cross-origin requests for JavaScript files. It is particularly useful when loading scripts from external domains (CDNs) or when dealing with CORS (Cross-Origin Resource Sharing) policies.
+
+Program using react:
+	• Const heading = React.createElement("h1", { id: "heading" }, "Hello World using React!");
+	• React.createElement will take the 3 arguments
+	• 1st arg will take the tag what we want to create
+	• 2nd arg is an object where we will give attributes to our tags
+	• 3rd arg will take the content what we need to pass inside the created html tag or we can again pass the children for the main tag
+	• To put the created h1 tag into DOM or onto browser we will use ReactDOM libraries to created the root method
+	• To create the root to interact with html page we need to use the ReactDOM
+	• ReactDOM.createRoot(document.getElementById("root"));
+	• root.render(React.createElement(heading));
+	• If we are printing the heading it will gives us the javascript object
+	• root.render use is to take the javascrpit object create the h1 tag which the browser will understand and put it inside the root element
