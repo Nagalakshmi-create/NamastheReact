@@ -1,0 +1,45 @@
+Why Use React?
+	• React can achieve everything that normal HTML and CSS can do.
+	• The reason we use a framework or library like React is that it allows developers to write less code while achieving more functionality on a web page.
+	• React enhances the developer experience by making coding faster and optimizing certain aspects of a web page for better performance.
+
+Project Structure
+	• All source code files should be placed inside the src folder.
+	• Static data should not be kept inside components. Instead, create a separate file (e.g., utils.js or constants.js), store the static data there, and export it for use in components.
+
+Exports and Imports in React
+	• Default Export: Used to export a single component or value from a file.
+ex: export default MyComponent
+	• Default Import: Used to import a default-exported value.|
+ex: import MyComponent from "./MyComponent";
+	• Named Export: Used to export multiple values or components from a file.
+ex: export const APP_URL = "https://example.com";
+       export const API_KEY = "123456";
+	• Named Import: Used to import specific named exports.
+ex: import { APP_URL, API_KEY } from "./constants";
+Note: When using named imports, the imported variables must be inside curly braces ({}).
+
+React Hooks
+	• React is fast in DOM Manipulation.
+	• React Hooks are normal JavaScript utility functions that help in managing state and side effects in functional components.
+	1. useState()
+		• useState allows components to have and manage local state.
+		• It returns an array with two elements: the current state value and a function to update it.
+		• It ensures the component re-renders whenever the state changes.
+		• It can store different types of values such as strings, numbers, objects, or arrays.
+		• Whenever a state variable is updated react will re-render the component
+	2. useEffect()
+		• useEffect is used to handle side effects in React components.
+		• Common side effects include fetching data, manipulating the DOM, setting up subscriptions, and managing timers.
+		• It takes two arguments: a function that contains the effect, and a dependency array that determines when the effect runs.
+		• If the dependency array is empty ([]), the effect runs only once when the component mounts.
+		• If dependencies are provided ([dependency]), the effect runs whenever those dependencies change.
+		• If no dependency array is provided, the effect runs after every render.
+	
+Reconciliation Algorithm (React Fiber)
+	• The actual DOM consists of HTML tags, whereas the Virtual DOM is a representation of the actual DOM used by React.
+	• Diff Algorithm: Compares two Virtual DOMs (previous and updated) to determine the differences and efficiently update the actual DOM.
+	• Why is React fast?
+			○ Uses the Virtual DOM for efficient updates.
+			○ Implements the Diff Algorithm for optimized DOM manipulations.
+			○ Reduces unnecessary re-renders and improves performance.
